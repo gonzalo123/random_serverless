@@ -62,7 +62,7 @@ npx serverless plugin install -n serverless-pseudo-parameters
 
 And that's all. Our "Hello world" lambda service with Python and Flask is up and running.
 Now We're going to create a "more complex" service. We're going to return a random number with random.randint function. 
-randint requires two parameters: start, end. We're going to pass the end parameter to our service. The start value will be parametrized. I'll parametrize it only because I want to play with AWS's Parameter Store ([SSM](https://medium.com/@nqbao/how-to-use-aws-ssm-parameter-store-easily-in-python-94fda04fea84)). It's just an excuse.
+randint requires two parameters: start, end. We're going to pass the end parameter to our service. The start value will be parameterized. I'll parameterize it only because I want to play with AWS's Parameter Store ([SSM](https://medium.com/@nqbao/how-to-use-aws-ssm-parameter-store-easily-in-python-94fda04fea84)). It's just an excuse.
 
 Let's start with the service:
 ```python
@@ -162,8 +162,4 @@ functions:
       - http: GET /
 ```
  
-And that's all. "npx serverless deploy" and my random generator is running.  
-
-
-
-
+And that's all. "npx serverless deploy" and my random generator is running.
